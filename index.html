@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garment Inventory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">K</div>
+        <div>
+          <strong>Konveksi</strong>
+          <span>Simple inventory</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Main menu">
+        <button class="nav-link active" data-page="dashboard"><span class="nav-icon">▦</span>Dashboard</button>
+        <button class="nav-link" data-page="items"><span class="nav-icon">▤</span>Item Catalog</button>
+        <div class="nav-caption">INVENTORY</div>
+        <button class="nav-link" data-page="inbound"><span class="nav-icon">＋</span>Stock In</button>
+        <button class="nav-link" data-page="conversion"><span class="nav-icon">⇄</span>Batch Conversion</button>
+        <button class="nav-link" data-page="sales"><span class="nav-icon">↗</span>Sales / Stock Out</button>
+        <button class="nav-link" data-page="history"><span class="nav-icon">◷</span>Transaction History</button>
+      </nav>
+
+      <div class="sidebar-note">
+        <strong>Usage tips</strong>
+        <p>Record every stock-in, conversion, and sale so inventory quantities stay up to date.</p>
+      </div>
+      <div class="sidebar-footer">Basic version · Browser local storage</div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">INVENTORY MANAGEMENT</div>
+          <h1 id="page-title">Dashboard</h1>
+        </div>
+        <div class="topbar-actions"><label class="language-control" for="language-select"><span>Language</span><select id="language-select" aria-label="Select language"><option value="en">English</option><option value="zh-TW">繁體中文</option><option value="tl">Tagalog</option></select></label><button class="button button-secondary" id="export-backup" type="button">↓ <span>Export Backup</span></button></div>
+      </header>
+      <section id="page-content" class="page-content" aria-live="polite"></section>
+      <footer class="main-footer">Garment Inventory <span>•</span> Starter project for initial development</footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
